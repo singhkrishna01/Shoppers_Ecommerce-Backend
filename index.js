@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cors());
 
 // Database Connection With MongoDB
-mongoose.connect("mongodb+srv://xenon01:Knowledge_20@cluster0.6jgnq18.mongodb.net/e-commerce")
+mongoose.connect(DATABASE_URL)
 .then(()=>console.log("database is connected successfully"))
 .catch((error)=> console.log("error during connection to database"))
 // paste your mongoDB Connection string above with password
