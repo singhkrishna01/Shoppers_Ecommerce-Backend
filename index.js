@@ -9,9 +9,9 @@ const cors = require("cors");
 
 app.use(express.json());
 app.use(cors());
-
+require('dotenv').config();
 // Database Connection With MongoDB
-mongoose.connect(DATABASE_URL)
+mongoose.connect(process.env.DATABASE_URL,{})
 .then(()=>console.log("database is connected successfully"))
 .catch((error)=> console.log("error during connection to database"))
 // paste your mongoDB Connection string above with password
